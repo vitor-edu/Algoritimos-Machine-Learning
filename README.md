@@ -1,2 +1,2 @@
-# Algoritimos-machine-learning
-exemplos Algoritimos machine learning
+# Algoritimos-Machine-learning
+exemplos Algoritimos Machine learning
