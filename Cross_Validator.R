@@ -1,13 +1,13 @@
 base = read.csv('credit-data.csv')
 base$clientid = NULL
 base
-summary(base) # Retorna os dados estatisticos básicos.
+summary(base) # Retorna os dados estatisticos bÃ¡sicos.
 
-#valores média
+#valores mÃ©dia
 media = mean(base$age[base$age>0],na.rm = TRUE)
 
 
-# Substituir valores negaativo pela média
+# Substituir valores negaativo pela mÃ©dia
 base$age = ifelse(base$age<0,media,base$age)
 
 # Substituir valores n/a pela media
@@ -25,7 +25,7 @@ library(caret)
 classIdx <- ncol(base)
 folds <- creatFolds(base[, classIdx],10,FALSE)
 
-# Variáveis
+# VariÃ¡veis
 
 melhor_acuracia = 0
 fold_melhor_acuracia = -1
@@ -38,7 +38,7 @@ for (i in 1:10){
  base_treino <- (data[folds!=i,]) # Atributos descritores de treino. 
  base_teste <- (data[folds==i,]) # Atributos descritores de teste. 
 
- #cria o classificador svm e faz as previsões
+ #cria o classificador svm e faz as previsÃµes
  classif_svm = svm(formula = default ~ ., data = base_treino,
                   type = 'Cclassification', kernel = 'linear', cost = 10)
 
